@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Cart — PastelMart</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<header class="container">
+  <nav class="nav" role="navigation">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpg" alt="Logo"/>
+      <div>
+        <div style="font-weight:800">PastelMart</div>
+        <div style="font-size:12px;color:var(--muted)">Soft living & lifestyle</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html?id=2">Example Product</a>
+      <a href="cart.html">Cart <span class="cart-count" style="background:#fff;padding:4px 8px;border-radius:999px;margin-left:6px">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Your Cart</h1>
+  <div class="cart-list" id="cart-list"></div>
+  <div style="margin-top:18px;display:flex;justify-content:space-between;align-items:center">
+    <div style="font-weight:700">Total: <span id="cart-total">$0.00</span></div>
+    <div>
+      <a class="btn" href="shop.html">Continue Shopping</a>
+      <a class="btn" href="checkout.html">Checkout</a>
+    </div>
+  </div>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>

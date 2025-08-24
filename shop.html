@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Shop — PastelMart</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<header class="container">
+  <nav class="nav" role="navigation">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpg" alt="Logo"/>
+      <div>
+        <div style="font-weight:800">PastelMart</div>
+        <div style="font-size:12px;color:var(--muted)">Soft living & lifestyle</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html?id=2">Example Product</a>
+      <a href="cart.html">Cart <span class="cart-count" style="background:#fff;padding:4px 8px;border-radius:999px;margin-left:6px">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Shop All Products</h1>
+  <div class="controls">
+    <select id="filter-category" class="select">
+      <option>All</option>
+      <option>Electronics</option>
+      <option>Clothing</option>
+      <option>Accessories</option>
+    </select>
+    <select id="sort-by" class="select">
+      <option value="">Sort</option>
+      <option value="price-asc">Price: Low → High</option>
+      <option value="price-desc">Price: High → Low</option>
+    </select>
+    <input class="search" placeholder="Search (type and press Enter)" onkeypress="if(event.key==='Enter'){ const q=this.value.toLowerCase(); const results=PRODUCTS.filter(p=>p.title.toLowerCase().includes(q)); renderProductsGrid('#products',results);}"/>
+  </div>
+
+  <div id="products" class="products-grid" style="margin-top:12px"></div>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>

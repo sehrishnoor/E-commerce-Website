@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Checkout — PastelMart</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<header class="container">
+  <nav class="nav" role="navigation">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpg" alt="Logo"/>
+      <div>
+        <div style="font-weight:800">PastelMart</div>
+        <div style="font-size:12px;color:var(--muted)">Soft living & lifestyle</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html?id=2">Example Product</a>
+      <a href="cart.html">Cart <span class="cart-count" style="background:#fff;padding:4px 8px;border-radius:999px;margin-left:6px">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Checkout</h1>
+  <div style="display:grid;grid-template-columns:1fr 320px;gap:18px">
+    <form onsubmit="placeOrder(event)" style="background:var(--card);padding:16px;border-radius:12px">
+      <div class="form-row">
+        <input id="fullName" class="input" placeholder="Full name" required/>
+        <input id="email" class="input" placeholder="Email" required/>
+      </div>
+      <div style="margin-top:12px">
+        <input id="phone" class="input" placeholder="Phone number" required/>
+      </div>
+      <div style="margin-top:12px">
+        <textarea id="address" class="input" placeholder="Address" rows="3" required></textarea>
+      </div>
+      <div style="margin-top:12px">
+        <select id="payment" class="input">
+          <option>Credit / Debit Card</option>
+          <option>Cash on Delivery</option>
+        </select>
+      </div>
+      <div style="margin-top:12px">
+        <button class="add-cart" type="submit">Place Order</button>
+      </div>
+    </form>
+    <aside style="background:var(--card);padding:16px;border-radius:12px">
+      <h3>Order Summary</h3>
+      <div id="checkout-summary"></div>
+    </aside>
+  </div>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
